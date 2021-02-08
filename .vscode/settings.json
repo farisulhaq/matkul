@@ -2,7 +2,7 @@
     "editor.fontSize": 14,
     "window.zoomLevel": 1,
     "terminal.integrated.fontSize": 12,
-    "workbench.colorTheme": "Noctis Minimus",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.iconTheme": "vscode-icons",
     "python.testing.unittestArgs": [
         "-v",

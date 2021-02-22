@@ -1,4 +1,4 @@
-from stack import*
+from stack import *
 
 def db(angka):
     st = stack()

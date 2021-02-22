@@ -20,7 +20,7 @@ def createSparseMatrix () :
         else :
             messagebox.showerror('Error','Index baris maksimum = '+str(row))
     return mat,row,col
-#Penjumlahan
+# Penjumlahan
 def addSparseMatrix (matrix1,matrix2,row1,col1) :
     matrik = {}
     for a in range (row1) :

@@ -11,8 +11,8 @@ def kalku(string):
                         pop(s)
                     temp = pop(s)
                     if peep(s) == ' ':
-                        pop(s)
-                    push(s,pop(s)-temp)
+                        s)
+                    push(s,ppop(op(s)-temp)
                 else:
                     return ('kekurangan operator')
             elif i == "+":

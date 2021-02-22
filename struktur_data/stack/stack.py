@@ -8,8 +8,9 @@ def pop(s):
     return data
 def peep(s):
     data = s[len(s)-1]
-    return data
+    return (data)
 def isEmpty(s):
     return (s==[])
 def size(s):
-    return len(s)
+    return (len(s))
+

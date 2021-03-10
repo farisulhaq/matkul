@@ -33,7 +33,7 @@ def postfix(data):
         while not(isEmpty(st)):
             hasil.append(pop(st))
         # return sekaligus merubah list ke string
-        return (' '.join(hasil))
+        return hasil
     else:
         return data
 # main program
@@ -46,4 +46,7 @@ while not(stop):
     # else dari stop
     else:
         convert = postfix(infix)
-        print('Hasil POSTfix', convert)
+        if type(convert) == list:
+            print('Hasil Postfix = ', ' '.join(convert))
+        else:
+            print('kesalahan',convert)

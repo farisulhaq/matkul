@@ -8,13 +8,18 @@ def kurung(string):
             push(s,i)
         elif i == ')' and not(isEmpty(s)) and peep(s) == '(':
             pop(s)
-        elif i == ')' or i == '}' and isEmpty(s):
+        elif (i == '}' or i == ')') and (isEmpty(s)):
             pesan = 'kelebihan tutup kurung'
         elif i == '}' and not(isEmpty(s)) and peep(s) == '{':
             pop(s)
-    print(s)
-    if size(s)>=1:
+        elif ((i == ')') and (peep(s) == '{')) or ((i == '}') and (peep(s) == '(')):
+            pesan = 'kurung buka dan kurung tutup tidak sama'
+            pop(s)
+    if not(isEmpty(s)):
         cek = False
-    return cek,pesan
-a = kurung('())')
+        pesan = 'kelebihan kurung buka'
+    elif pesan != 'tidak ada eror':
+        cek = False
+    return cek, pesan
+a = kurung('(}')
 print(a)

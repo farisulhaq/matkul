@@ -6,7 +6,7 @@ def push(s,data):
 def pop(s):
     data = s.pop()
     return data
-def peep(s):
+def peek(s):
     data = s[len(s)-1]
     return (data)
 def isEmpty(s):

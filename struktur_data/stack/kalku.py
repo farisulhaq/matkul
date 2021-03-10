@@ -11,8 +11,8 @@ def kalku(string):
                         pop(s)
                     temp = pop(s)
                     if peep(s) == ' ':
-                        s)
-                    push(s,ppop(op(s)-temp)
+                        pop(s)
+                    push(s,pop(s)-temp)
                 else:
                     return ('kekurangan operator')
             elif i == "+":
@@ -46,5 +46,5 @@ def kalku(string):
         return ('kelebihan operator')
     else:
         return(pop(s))
-a = kalku('1 2 + 6 - 2 /')
+a = kalku('1 2 + 6 - 2 *')
 print(a)

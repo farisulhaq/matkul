@@ -18,7 +18,7 @@ def postfix(data):
             # append angka atau huruf ke hasil
             elif i.isalnum():
                 hasil.append(i)
-            # append operator yg ada di dalam kurung
+            # append operator yg ada di dalam kurung ke hasil
             elif i in ')}]':
                 temp = pop(st)
                 while temp != kurung[i]:

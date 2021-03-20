@@ -1,0 +1,91 @@
+.menu {
+    display: block;
+    background-color:rgb(74, 65, 107);
+    height:48px;
+}
+
+#navigasi {
+    position:relative;
+    line-height:30px;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    list-style-position: outside;
+}
+
+#navigasi a {
+    display:block;
+    padding:8px 16px;
+    background-color: rgb(74, 65, 107);
+    color:#fff;
+    text-decoration:none;
+}
+
+#navigasi a:hover {
+    background-color:#9eac4f;
+    color:#fff;
+}
+
+#navigasi li {
+    position:relative;
+    float:left;
+}
+
+#navigasi ul {
+    position: absolute;
+    display:none;
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    list-style-position:outside;
+}
+
+#navigasi li ul a {
+    width:11em;
+    height:auto;
+    float:left;
+}
+
+#navigasi li:hover ul {
+    display: block;
+}
+
+#navigasi li:hover ul ul {
+    display:none;
+}
+img {
+    width:200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border: 10px solid rgb(74, 65, 107); 
+
+}
+.teks {
+    border-radius: 25px;
+    border: 2px solid rgb(74, 65, 107);
+    background: cadetblue;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.box ul {
+    padding: 0px;
+}
+.box-kiri {
+    float: left;
+	width: 40%;
+	border: 2px solid rgb(74, 65, 107);
+	padding: 5px;
+    background-color: rgb(226, 178, 21);
+}
+.box-kanan {
+    float: right;
+	width: 40%;
+	border: 2px solid rgb(74, 65, 107);
+	padding: 5px;
+    background-color: rgb(226, 178, 21);
+}

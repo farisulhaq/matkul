@@ -5,6 +5,3 @@ def aku(c,b):
             return (a[(i + b) % 12])
 a = aku('E',18)   
 print(a)
-
-    
-            

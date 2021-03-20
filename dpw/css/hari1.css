@@ -1,0 +1,39 @@
+h1{
+    color: rgb(0,0,250);
+    font-size: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+p{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+    font-style: normal;
+    text-align: justify;
+    text-indent: 50px;    
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:darkgrey;
+    background-image: url(../img/bg1.png);
+    background-repeat: repeat;
+}
+
+li:nth-child(odd) a {
+    color: teal;
+}
+li:nth-child(odd) a:hover {
+    color:red;
+}
+li:nth-child(even) a:active {
+    font-size: 20px;
+}
+li:nth-child(even) a:visited {
+    color: hotpink;
+}
+p:first-of-type {
+    color: blue;
+}
+p:last-of-type {
+    color: chartreuse;
+}

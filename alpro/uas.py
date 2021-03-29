@@ -27,3 +27,18 @@
 #     inp1 = input('ulangi (y/t): ')
 #     if inp1 == 't':
 #         start = False
+
+a = []
+for i in range(4):
+    b = []
+    for j in range(4):
+        if i == j or i < j:
+            b.append(1)
+        else:
+            b.append(0)
+    a.append(b)
+for i in range(len(a)):
+    print("|",end="")
+    for j in range(len(a[0])):
+        print("%4d"%(a[i][j]),end="")
+    print("%4s"%"|")

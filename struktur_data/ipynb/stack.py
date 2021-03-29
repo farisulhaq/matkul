@@ -13,3 +13,4 @@ def isEmpty(s):
     return (s==[])
 def size(s):
     return (len(s))
+    

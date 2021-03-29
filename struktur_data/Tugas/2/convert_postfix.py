@@ -46,6 +46,7 @@ while not(stop):
     # else dari stop
     else:
         convert = postfix(infix)
+        print(convert)
         if type(convert) == list:
             print('Hasil Postfix = ', ' '.join(convert))
         else:

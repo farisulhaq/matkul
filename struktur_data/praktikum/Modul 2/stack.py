@@ -13,13 +13,4 @@ def peek(s):
 def isEmpty(s):
     return s == []
 def size(s):
-    return len(s)
-    
-def cekkurung(data):
-    st = stack()
-    for i in data:
-        if i in "({[":
-            push(st, i)
-            
-
-cekkurung("()")
+    return len(s) 

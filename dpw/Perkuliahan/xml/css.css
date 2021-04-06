@@ -1,0 +1,15 @@
+academic {
+    background-color: blue;
+    width: 100%;
+}
+student {
+    display: block;
+    background-color: black;
+    color: white;
+    margin-bottom: 5pt;
+}
+id {
+    background-color: white;
+    margin-bottom: 12pt;
+    color: black;
+}

@@ -1,0 +1,43 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(139, 102, 240);
+}
+.container {
+    width: max-content;
+    background-color: rgb(241, 237, 237);
+    display: flex;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+}
+.header {
+    color: white;
+}
+.wisata {
+    flex: 1;
+    width: 300px;
+    padding: 5px;
+    background-color: teal;
+}
+.dev {
+    width: 299px;
+}
+img {
+    width:300px;
+    height: 200px;
+    border: 1px solid rgb(243, 125, 125);
+}
+p {
+    text-align: justify;
+    text-indent: 40px;
+    display: none;
+    color: white;
+}
+h1, h2 {
+    text-align: center;
+    color: white;
+}
+.reset {
+    text-align: center;
+}

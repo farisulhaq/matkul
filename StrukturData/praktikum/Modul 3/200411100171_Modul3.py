@@ -12,7 +12,7 @@ def queueProgram(data,waktu):
     num = 1
     while not(isEmpty(data)):
         print('Iterasi ke-',num)
-        q = deQueue(data)
+        q = deQueue(data) # ["A",5]
         if q[1] > waktu:
             q[1] -= waktu
             print(f'\tProses {q[0]} Sedang Diproses, Dan Sisa Waktu Proses {q[0]} = {q[1]}')

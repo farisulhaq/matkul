@@ -8,78 +8,89 @@
 </head>
 <body>
     <table>
-        <tr>
-            <td><label for="kode">Kode MK</label></td>
-            <td>:</td>
-            <td><input type="text" id="kode"></td>
-        </tr>
-        <tr>
-            <td><label for="sks">SKS</label></td>
-            <td>:</td>
-            <td><input type="number" id="sks"></td>
-        </tr>
-        <tr>
-            <td><label for="mk">Nama MK</label></td>
-            <td>:</td>
-            <td><input type="text" id="mk"></td>
-        </tr>
-        <tr>
-            <td><label for="mk">Kelas</label></td>
-            <td>:</td>
-            <td><input type="text" id="mk"></td>
-        </tr>
-        <tr>
-            <td><label for="ajaran">Tahun Ajaran</label></td>
-            <td>:</td>
-            <td>
-                <select name="ajaran" id="ajaran">
-                    <option value="pilih">Pilih Ajaran &emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;</option>
-                    <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
-                    <option value="2025">2025</option>
-                    <option value="2026">2026</option>
-                    <option value="2027">2027</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="semester">Semester</label></td>
-            <td>:</td>
-            <td>
-                <select name="semester" id="semester">
-                    <option value="semester">Pilih Semester&emsp;&emsp;&emsp;&emsp;</option>
-                    <option value="semester-1">semester-1</option>
-                    <option value="semester-2">semester-2</option>
-                    <option value="semester-3">semester-3</option>
-                    <option value="semester-4">semester-4</option>
-                    <option value="semester-5">semester-5</option>
-                    <option value="semester-6">semester-6</option>
-                    <option value="semester-7">semester-7</option>
-                    <option value="semester-8">semester-8</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td><label for="nilai">Nilai</label></td>
-            <td>:</td>
-            <td><input type="text" id="nilai"></td>
-        </tr>
-        <tr>
-            <td><label for="awal">Tanggal Mulai</label></td>
-            <td>:</td>
-            <td><input type="date" id="awal"></td>
-        </tr>
-        <tr>
-            <td><label for="akhir">Tanggal Berakhir</label></td>
-            <td>:</td>
-            <td><input type="date" id="akhir"></td>
-        </tr>
-        <tr>
-            <td colspan="3" align="center"><input type="submit" value="kirim"></td>
-        </tr>
+        <form action="#">
+            <tr>
+                <td><label for="kode">Kode MK</label></td>
+                <td>:</td>
+                <td><input type="text" id="kode"></td>
+            </tr>
+            <tr>
+                <td><label for="sks">SKS</label></td>
+                <td>:</td>
+                <td><input type="number" id="sks"></td>
+            </tr>
+            <tr>
+                <td><label for="mk">Nama MK</label></td>
+                <td>:</td>
+                <td><input type="text" id="mk"></td>
+            </tr>
+            <tr>
+                <td><label for="mk">Kelas</label></td>
+                <td>:</td>
+                <td><input type="text" id="mk"></td>
+            </tr>
+            <tr>
+                <td><label for="ajaran">Tahun Ajaran</label></td>
+                <td>:</td>
+                <td>
+                    <select name="ajaran" id="ajaran">
+                        <option value="pilih">Pilih Ajaran &emsp;&emsp;&nbsp;&emsp;&emsp;&emsp;</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="semester">Semester</label></td>
+                <td>:</td>
+                <td>
+                    <select name="semester" id="semester">
+                        <option value="semester">Pilih Semester&emsp;&emsp;&emsp;&emsp;</option>
+                        <option value="semester-1">semester-1</option>
+                        <option value="semester-2">semester-2</option>
+                        <option value="semester-3">semester-3</option>
+                        <option value="semester-4">semester-4</option>
+                        <option value="semester-5">semester-5</option>
+                        <option value="semester-6">semester-6</option>
+                        <option value="semester-7">semester-7</option>
+                        <option value="semester-8">semester-8</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="nilai">Nilai</label></td>
+                <td>:</td>
+                <td>
+                    <input type="radio" id="A" name="nilai">
+                    <label for="A">A</label>
+                    <input type="radio" id="B+" name="nilai">
+                    <label for="B+">B+</label>
+                    <input type="radio" id="C+" name="nilai">
+                    <label for="C+">C+</label>
+                    <input type="radio" id="D+" name="nilai">
+                    <label for="D+">D+</label>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="awal">Tanggal Mulai</label></td>
+                <td>:</td>
+                <td><input type="date" id="awal"></td>
+            </tr>
+            <tr>
+                <td><label for="akhir">Tanggal Berakhir</label></td>
+                <td>:</td>
+                <td><input type="date" id="akhir"></td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center"><input type="submit" value="kirim"></td>
+            </tr>
+        </form>
     </table>
 </body>
 </html>

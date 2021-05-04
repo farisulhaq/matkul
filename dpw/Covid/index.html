@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Covid</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="quest" id="quest1" style="display: block">
+        <p>Apakah anda menagalami:</p>
+        <ul>
+          <li><h3>demam</h3></li>
+          <li>
+            <h3>terdapat 3:</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga distinctio maiores voluptatem provident quod eius a quis blanditiis placeat</p>
+          </li>
+        </ul>
+        <div class="box">
+          <button type="button" class="btn" onclick="answer1('no')">No</button>
+          <button type="button" class="btn" onclick="answer1('yes')">Yes</button>
+        </div>
+      </section>
+
+      <!-- Jika pertanyaan 1 ya -->
+      <section class="quest" id="quest2">
+        <p>Pada 14 hari terakhir :</p>
+        <ul>
+          <li>Tinggal atau berpergian</li>
+          <li>Tinggal atau berpergian</li>
+          <li>Tinggal atau berpergian</li>
+        </ul>
+        <div class="box">
+          <button type="button" class="btn" onclick="answer2('no')">No</button>
+          <button type="button" class="btn" onclick="answer2('yes')">Yes</button>
+        </div>
+      </section>
+
+      <!-- Jika Pertanyaan 2 tidak maka Output -->
+      <section class="quest" id="output1">
+        <p>Instirahat yang cukup dan Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius, voluptas.</p>
+      </section>
+
+      <!-- jika pertanyaan 1 tidak -->
+      <section class="quest" id="quest4">
+        <p>Pada 14 hari terakhir:</p>
+        <ul>
+          <li>Tinggal atau berpergian</li>
+          <li>Tinggal atau berpergian</li>
+          <li>Bekerja di Fasyanke .... dan kontak</li>
+        </ul>
+        <div class="box">
+          <button type="button" class="btn" onclick="answer3('no')">No</button>
+          <button type="button" class="btn" onclick="answer3('yes')">Yes</button>
+        </div>
+      </section>
+
+      <!-- Jika pertanyaan 4 tidak maka Output -->
+      <section class="quest" id="output2">
+        <p>selalu jaga kesehatan ... dalam beraktivitas</p>
+      </section>
+
+      <!-- Jika Pertanyaan 4 ya -->
+      <section class="quest" id="output3">
+        <p>Lakukan monitoring ... selama 14 hari</p>
+      </section>
+      <!-- Output 5 -->
+      <section class="quest" id="output4">
+        <p>Jika muncul gejala</p>
+      </section>
+
+      <!-- Jika pertanyaan 2 ya  atau pertanyaan 4 ya-->
+      <section class="quest" id="quest5">
+        <h3>SUSPEK</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <div class="box">
+          <button style="width: auto" type="button" class="btn" onclick="answer4('positif')">Positif</button>
+          <button style="width: auto" type="button" class="btn" onclick="answer4('negatif')">Negative</button>
+        </div>
+      </section>
+      <!-- JIka positif -->
+      <section class="quest" id="output5">
+        <h3>Kasus Konfirmasi</h3>
+      </section>
+
+      <!-- Jika negative -->
+      <section class="quest" id="output6">
+        <h3>Discared Bukan</h3>
+      </section>
+
+      <!-- Lanjut ke pertanyaan 6 -->
+      <section class="quest" id="quest6">
+        <h3>JIKA ANDA MENGALAMI</h3>
+        <div class="box">
+          <button type="button" class="btn" onclick="answer5('no')">No</button>
+          <button type="button" class="btn" onclick="answer5('yes')">Yes</button>
+        </div>
+      </section>
+
+      <!-- Jika  pertanyaan 6 ya-->
+      <section class="quest" id="quest7">
+        <p>jika anda pernah kontak consectetur, adipisicing elit. Vel itaque minus nam aliquid? Delectus tempora ratione quis, est adipisci blanditiis!</p>
+        <div class="box">
+          <button type="button" class="btn" onclick="answer6('no')">No</button>
+          <button type="button" class="btn" onclick="answer6('yes')">Yes</button>
+        </div>
+      </section>
+
+      <!--  -->
+      <section class="quest" id="output7">
+        <h3>Terima kasih</h3>
+      </section>
+      <!--  -->
+      <section class="quest" id="output8">
+        <h3>Segera lakukan karantina</h3>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

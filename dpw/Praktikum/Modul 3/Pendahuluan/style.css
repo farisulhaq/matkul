@@ -1,0 +1,9 @@
+p {
+    color: green;
+    text-align: justify;
+    text-indent: 30px;
+    text-decoration: grey;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}

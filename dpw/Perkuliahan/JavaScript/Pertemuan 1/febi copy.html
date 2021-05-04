@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        function keyup(){
+            var temp = document.getElementById("wrn").value;
+            document.getElementById("h1").style.color = temp;
+        }
+    </script>
+</head>
+<body>
+    
+    <form action="#">
+        <h1 id="h1">FEBI CANTIK MOM</h1>
+        <select name="wrn" id="wrn" onchange="keyup()">
+            <option value="pilih">pilih</option>
+            <option value="red">Merah</option>
+            <option value="blue">Biru</option>
+            <option value="gray">Abu-Abu</option>
+        </select>
+    </form>
+</body>
+</html>

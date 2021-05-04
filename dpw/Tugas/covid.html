@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btn no" onclick="logout()">Logout</button>
+        <h1>ALUR DETEKSI DINI COVID-19</h1>
+        <p class="nama">NAMA : AHMAD FARISUL HAQ</p>
+        <p class="nama">NIM : 200411100171</p>
+        <div class="soal" id="soal1" style="display: block;">
+            <form action="#" method="POST">
+                <div class="content">
+                    <h2>Apakah Anda Mengalami:</h2>
+                    <ol>
+                        <li>
+                            <p>Demam (&ge;38&deg;C) Dan Batuk Atau </p>
+                        </li>
+                        <li>
+                            <p>Terdapat 3 atau Lebih Gejala/Tanda Berikut:</p>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala1">
+                            <label for="gejala1">Demam (&ge;38&deg;C)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala2">
+                            <label for="gejala2">batuk</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala3">
+                            <label for="gejala3">Kelelahan</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala4">
+                            <label for="gejala4">sakit kepala</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala5">
+                            <label for="gejala5">myalgia</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala6">
+                            <label for="gejala6">nyeri tenggorokan</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala7">
+                            <label for="gejala7">pilek</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala8">
+                            <label for="gejala8">sesak nafas</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala9">
+                            <label for="gejala9">mual</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala10">
+                            <label for="gejala10">diare</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala11">
+                            <label for="gejala11">penurunan Kesadaran</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tombol">
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return nextFa('gejala','soal2','soal3','soal1')">SELANJUTNYA</button>
+                    </div>
+                    <!-- <div class="btn2">p
+                        <button class="btn no" id="yes1"  onclick="event.preventDefault();covid('yes1','clue1','soal1')">SEBELUMNYA</button>
+                    </div> -->
+                </div>
+            </form>
+        </div>
+        <!-- jika soal 1 True -->
+        <div class="soal" id="soal2">
+            <form action="#" method="GET">
+                <div class="content">
+                    <h2>Pada 14 Hari Terakhir:</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="plh" id="plh1">
+                            <label for="plh1">Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="plh" id="plh2">
+                            <label for="plh2">tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="plh" id="plh3">
+                            <label for="plh3">bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tombol">
+                    <button class="btn yes" onclick="return nextFz('plh','soal4','clue1','soal2')">SELANJUTNYA</button>
+                    <button class="btn no" onclick="return backFa('soal1','soal2')">SEBELUMNYA</button>
+                </div>
+            </form>
+        </div>
+        <!-- jika soal 1 False -->
+        <div class="soal" id="soal3">
+            <form action="#" method="GET">
+                <div class="content">
+                    <h2>Pada 14 Hari Terakhir:</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="plhn" id="plh4">
+                            <label for="plh4">Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="plhn" id="plh5">
+                            <label for="plh5">tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="plhn" id="plh6">
+                            <label for="plh6">bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tombol">
+                    <button class="btn yes" onclick="return nextFz('plhn','clue3','clue2','soal3')">SELANJUTNYA</button>
+                    <button class="btn no" onclick="return backFa('soal1','soal3')">SEBELUMNYA</button>
+                </div>
+            </form>
+        </div>
+        <!-- jika soal 2 False -->
+        <div class="soal" id="clue1">
+            <p>istirahat yang cukup dan periksakan diri ke fasilitas pelayanan kesehatan untuk tata laksana lebih lanjut</p>
+        </div>
+        <!-- jika soal 3 False -->
+        <div class="soal" id="clue2">
+            <p>selalu jaga kesehatan dan terapkan protokol kesehatan dalam beraktivitas</p>
+        </div> 
+        <!-- jika soal 3 True -->
+        <div class="siap" id="clue3">
+            <div class="soalH">
+                <p>lakukan monitoring kesehatan mandiri selama 14 hari</p>
+            </div>
+            <div class="soalH">
+                <p>apakah muncul gejala ?</p>
+                <form action="#" method="GET">
+                    <input type="radio" name="gjl" id="iya" value="iya" onclick="backFa('soal4','clue3')">
+                    <label for="iya">iya</label>
+                    <input type="radio" name="gjl" id="tidak" value="tidak" onclick="backFa('clue6','clue3')">
+                    <label for="tidak">tidak</label>
+                </form>
+            </div>
+        </div>
+        <!-- jika soal 2 dan clue 3 True dan clue 4 -->
+        <div class="soal" id="soal4">
+            <h1 class="text">suspek</h1>
+            <p>periksakan diri untuk dilakukan pengambalian spesimen dan tatalaksana lebih lanjut</p>
+            <h2>hasil cekup</h2>
+            <div class="tombolPN">
+                <button class="btn yes" onclick="backFa('clue4','soal4')">POSITIF (+)</button>
+                <button class="btn no" onclick="backFa('clue5','soal4')">NEGATIF (-)</button>
+            </div>
+        </div>
+        <!-- jika positif -->
+        <div class="siap" id="clue4">
+            <div class="soalH text">
+                <p>POSITIF (+)</p>
+            </div>
+            <div class="soalH">
+                <p>KASUS KONFIRMASI</p>
+            </div>
+            <div class="soalH">
+                <p>SEGERA! konsultasi dengan petugas kesehatan setempat</p>
+            </div>
+        </div>
+        <!-- jika negatif -->
+        <div class="siap" id="clue5">
+            <div class="soalH text">
+                <p>NEGATIF (-)</p>
+            </div>
+            <div class="soalH">
+                <p>DISCARDED (BUKAN COVID-19)</p>
+            </div>
+            <div class="soalH">
+                <p>- Selalu Jaga Kesehatan</p>
+                <p>- terapkan Protokol kesehatan dalam beraktivitas</p>
+            </div>
+        </div>
+        <!-- jika clue 3 False -->
+        <div class="soal" id="clue6">
+            <h2>JIKA ANDA MENGALAMI:</h2>
+            <p>anosmia (hilangnya kemampuan indra penciuman) atau ageusia (hilangnya kemampuan indra perasa)</p>
+            <form action="#" method="get">
+                <input type="radio" name="alam" id="ya" value="iya" onclick="backFa('soal4','clue6')">
+                <label for="ya">iya</label>
+                <input type="radio" name="alam" id="ga" value="tidak" onclick="backFa('clue7','clue6')">
+                <label for="ga">tidak</label>
+            </form>
+        </div>
+        <!-- jika clue 6 False -->
+        <div class="soal" id="clue7">
+            <p>jika anda pernah kontak dengan kasus probable/konfirmasi COVID-19 dan anda mempunyai gejala  atau tidak bergejala, segera lakukan KARANTINA MANDIRI dan SEGERA MELAPORKAN ke fasilitas pelayanan kesehatan atau dinas kesehatan setempat</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

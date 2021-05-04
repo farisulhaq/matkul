@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ALUR DETEKSI DINI COVID-19</h1>
+        <div class="soal" id="soal1" style="display: block;">
+            <div class="content">
+                <h2>Apakah Anda Mengalami:</h2>
+                <ol>
+                    <li>
+                        <p>Demam (&ge;38&deg;C) Dan Batuk Atau </p>
+                    </li>
+                    <li>
+                        <p>Terdapat 3 atau Lebih Gejala/Tanda Berikut:</p>
+                    </li>
+                </ol>
+                <p>Demam (&ge;38&deg;C), Batuk, Kelelahan (fatigue), Sakit Kepala, myalgia, Nyeri Tenggorokan, Pilek/Hidung Tersumbat, Sesak Nafas, Mual/Muntah, Diare, Penurunan Kesadaran</p>
+            </div>
+            <h3>Pilih Jawaban</h3>
+            <div class="tombol">
+                <button class="btn yes" id="yes1" value="yes" onclick="covid('yes1','soal2','soal1')">YES</button>
+            </div>
+        </div>
+        <!-- jika soal 1 YES -->
+        <div class="soal" id="soal2">
+            <div class="content">
+                <h2>Pada 14 Hari Terakhir:</h2>
+                <ul>
+                    <li>
+                        <p>Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</p>
+                    </li>
+                    <li>
+                        <p>tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</p>
+                    </li>
+                    <li>
+                        <p>bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</p>
+                    </li>
+                </ul>
+            </div>
+            <h3>Pilih Jawaban</h3>
+            <div class="tombol">
+                <button class="btn yes" id="yes2" value="yes" onclick="covid('yes2','clue','soal2')">YES</button>
+                <button class="btn no" id="no2" value="no" onclick="covid('no2','clue1','soal2')">NO</button>
+            </div>
+        </div>
+        <!-- jika soal 2 NO -->
+        <div class="soal" id="clue1">
+            <p>istirahat yang cukup dan periksakan diri ke fasilitas pelayanan kesehatan untuk tata laksana lebih lanjut</p>
+        </div>
+        <!-- jika soal 1 NO -->
+        <div class="soal" id="soal3">
+            <div class="content">
+                <h2>Pada 13 Hari Terakhir:</h2>
+                <ul>
+                    <li>
+                        <p>Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</p>
+                    </li>
+                    <li>
+                        <p>tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</p>
+                    </li>
+                    <li>
+                        <p>bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</p>
+                    </li>
+                </ul>
+            </div>
+            <h3>Pilih Jawaban</h3>
+            <div class="tombol">
+                <button class="btn yes" id="yes2" value="yes" onclick="covid('yes2','soal2','soal3')">YES</button>
+                <button class="btn no" id="no2" value="no" onclick="covid('no2','clue2','soal3')">NO</button>
+            </div>
+        </div>
+        <!-- jika soal 3 NO -->
+        <div class="soal" id="clue2">
+            <p>selalu jaga kesehatan dan terapkan protokol kesehatan dalam beraktivitas</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

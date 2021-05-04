@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" href="pretugas.css">
+	</head>
+	<body>
+		<form action="#">
+			<h1>Register</h1>
+			<fieldset>
+				<legend>Personal</legend>
+				<div class="box">
+					<label class="label" for="name">Name</label>
+					<input type="text" name="name" id="name" onkeyup="cekValue()">
+					<span id="nameMissing" style="color: red; visibility: hidden;">Name is a required field</span>
+				</div>
+				<div class="box">
+					<label class="label" for="SA">Streat Adrass</label>
+					<textarea id="SA"></textarea>
+				</div>
+				<div>
+					<label class="label">State</label>
+					<select name="state" id="state">
+						<option value="choose your state">choose your state</option>
+						<option value="DKI Jakarta">DKI Jakarta</option>
+                        <option value="West J">West Java</option>
+                        <option value="Central Java">Central Java</option>
+                        <option value="East Java">East Java</option>
+                        <option value="DI Yogyakarta">DI Yogyakarta</option>
+					</select>
+				</div>
+				<div>
+					<label class="label" for="EA">Email Address</label>
+					<input type="text" name="EA" id="EA">
+				</div>
+				<div>
+					<label class="label">Gender</label>
+					<input type="radio" name="Gender" value="Male" id="Male">
+					<label for="Male">Male</label>
+					<input type="radio" name="Gender" value="Female" id="Female">
+					<label for="Female">Female</label>
+				</div>
+				<div>
+					<label class="label" for="vegan">Vegetarian?</label>
+					<input type="checkbox" name="vegan" id="vegan">
+				</div>
+				<div>
+					<label class="label" for="pw">Password</label>
+					<input type="password" name="pw" id="pw">
+					<span id="eror" style="color: red;"></span>
+				</div>
+				<div>
+					<label class="label" for="cpw">Confirm Password</label>
+					<input type="password" name="cpw" id="cpw">
+					<span id="pesan" style="color: red; visibility: hidden;">password tidak sama</span>
+				</div>
+				<div>
+					<label class="submit" for="submit"></label>
+					<input onclick="return validasi()" type="submit" name="submit" id="submit">
+				</div>
+			</fieldset>
+		</form>
+		<script type="text/javascript" src="index.js"></script>
+	</body>
+</html>

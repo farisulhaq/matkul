@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            border: 5px solid #eee;
+            margin-bottom: 5px;
+            box-shadow: 0px 0px 3px 3px gray;
+        }
+    </style>
+    <script>
+        function change(){
+            var wrn = document.getElementById("warna").value;
+            document.getElementById("box").style.backgroundColor = wrn;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="box"></div>
+        <div class="pilih">
+            <form action="">
+                <label for="warna">Pilih Warna</label>
+                <select name="warna" id="warna" onchange="change()">
+                    <option value="pilih">-- Pilih warna --</option>
+                    <option value="red">Red</option>
+                    <option value="blue">Blue</option>
+                    <option value="black">Black</option>
+                    <option value="green">Green</option>
+                </select>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

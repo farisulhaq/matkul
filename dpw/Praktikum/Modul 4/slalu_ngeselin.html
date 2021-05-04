@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>image sprite</title>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #ccc;
+        color: rgb(197, 116, 129);
+        font-style: oblique;
+    }
+    
+    .gallery {
+        margin: 10px;
+        padding: 10px;
+        float: left;
+        width: max-content;
+        box-sizing: border-box;
+        border: 20px solid black;  
+        border-image-source: url(https://www.w3schools.com/css/border.png);
+        border-image-slice: 20;
+        border-image-repeat: stretch;
+    }
+    h1 {
+        text-align: center;
+    }
+    a {
+        display: block;
+        height: 350px;
+        padding-left: 350px;
+        border: 5px solid blue;
+        border-radius: 40px;
+        background: url(https://pbs.twimg.com/media/E0cTpZiUUAEJKmC?format=jpg&name=large) no-repeat; /* As all link share the same background-image */
+    }
+    a:hover {
+        border: 5px solid pink;
+    }
+    a.gmb1 {
+        background-position: 0 0;
+    }
+    a.gmb2 {
+        background-position: 0 -350px;
+    }
+    a.gmb3 {
+        background-position: 0 -700px;
+    }
+    a.gmb4 {
+        background-position: 0 -1050px;
+    }
+    a.gmb5 {
+        background-position: 0 -1400px;
+    }
+</style>
+</head>
+<body>
+	<div class="container">
+        <div class="gallery">
+            <a class="gmb1" href="#"></a>
+            <h1>Jatim Park 3</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb2" href="#"></a>
+            <h1>Air Terjun Tretes</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb3" href="#"></a>
+            <h1>Air Terjun Coban Rondo</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb4" href="#"></a>
+            <h1>Wisata Bahari Lamongan</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb5" href="#"></a>
+            <h1>Telaga Sarangan</h1>
+        </div>
+    </div>
+</body>
+</html>

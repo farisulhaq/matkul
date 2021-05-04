@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        fieldset{
+            width: 350px;
+            margin: 100px auto;
+        }
+        table{
+            margin: auto;
+        }
+        input[type=text], input[type=number], input[type=email]{
+            width: 202px;
+        }
+        input[type=date], textarea{
+            width: 205px;
+        }
+        select{
+            width: 210px;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="GET">
+        <fieldset>
+            <table>
+                <caption><h1>Pendaftaran Anggota</h1></caption>
+                <tr>
+                    <td><label for="nama">Nama Lengkap</label></td>
+                    <td>:</td>
+                    <td><input type="text" id="nama" name="nama" placeholder="Nama Lengkap"></td>
+                </tr>
+                <tr>
+                    <td><label for="gender">Jenis Kelamin</label></td>
+                    <td>:</td>
+                    <td>
+                        <input type="radio" id="laki" name="gender">
+                        <label for="laki">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="gender">
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="agama">Agama</label></td>
+                    <td>:</td>
+                    <td>
+                        <select name="agama" id="agama">
+                            <option value="pilih">-- Pilih --</option>
+                            <option value="islam">islam</option>
+                            <option value="kristen">kristen</option>
+                            <option value="hindu">hindu</option>
+                            <option value="budha">budha</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="tgl">Tanggal Lahir</label></td>
+                    <td>:</td>
+                    <td><input type="date" name="tgl" id="tgl"></td>
+                </tr>
+                <tr>
+                    <td><label for="hp">Telepon</label></td>
+                    <td>:</td>
+                    <td><input type="number" name="hp" id="hp" placeholder="087881735505"></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td>:</td>
+                    <td><input type="email" name="email" id="email" placeholder="faries089@gmail.com"></td>
+                </tr>
+                <tr>
+                    <td><label for="alamat">Alamat</label></td>
+                    <td>:</td>
+                    <td><textarea name="alamat" id="alamat" placeholder="Jl. Raya Sumenep"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="submit" value="submit"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

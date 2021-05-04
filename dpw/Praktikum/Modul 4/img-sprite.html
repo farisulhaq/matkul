@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>image sprite</title>
+<style>
+    ul.menu {
+        list-style-type: none;
+    }
+    ul.menu li {
+        padding: 5px;
+        font-size: 16px;
+        font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+    ul.menu li a {
+        height: 140px;
+        line-height: 140px;
+        display: inline-block;
+        padding-left: 300px;
+        color: #3E789F;
+        background: url(https://i0.wp.com/css-tricks.com/wp-content/uploads/2009/10/sprite.png) no-repeat; /* As all link share the same background-image */
+    }
+    ul.menu li.canada a {
+        background-position: 0 0;
+    }
+    ul.menu li.usa a {
+        background-position: 0 -140px;
+    }
+    ul.menu li.meksiko a {
+        background-position: 0 -290px;
+    }
+</style>
+</head>
+<body>
+	<ul class="menu">
+        <li class="canada"><a href="#">CANADA</a></li>
+        <li class="usa"><a href="#">USA</a></li>
+        <li class="meksiko"><a href="#">MEKSIKO</a></li>
+    </ul>
+</body>
+</html>

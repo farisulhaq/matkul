@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Dini Covid-19</title>
+    <link rel="stylesheet" href="covid.css">
+    <script src="covid.js"></script>
+</head>
+<body>
+    <div class="kontent">
+        <button class="btn no" onclick="refres()">Refres</button>
+        <h1>ALUR DETEKSI DINI COVID-19</h1>
+        <p class="identitas">
+            NAMA : FEBI FADLILAH NUR AMINAH</br>
+            NIM : 200411100115
+        </p>
+        <div class="question" id="ques1" style="display: block;">
+            <form action="#" method="GET">
+                <div class="konten">
+                    <h2>Apakah Anda Mengalami:</h2>
+                    <ol>
+                        <li>
+                            <p>Demam (&ge;38&deg;C) Dan Batuk Atau </p>
+                        </li>
+                        <li>
+                            <p>Terdapat 3 atau Lebih Gejala/Tanda Berikut:</p>
+                        </li>
+                    </ol>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala1">
+                            <label for="gejala1">Demam (&ge;38&deg;C)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala2">
+                            <label for="gejala2">Batuk</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala3">
+                            <label for="gejala3">Kelelahan / Letih</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala4">
+                            <label for="gejala4">Sesak Nafas</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="gejala" id="gejala5">
+                            <label for="gejala5">Sakit Tenggorokan</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="klik">
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return slideNext('gejala','ques2','ques3','ques1')">NEXT</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="question" id="ques2">
+            <form action="#" method="GET">
+                <div class="konten">
+                    <h2>Pada 14 Hari Terakhir:</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="riwayat" id="riwayat1">
+                            <label for="riwayat1">Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="riwayat" id="riwayat2">
+                            <label for="riwayat2">Tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="riwayat" id="riwayat3">
+                            <label for="riwayat3">Bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="klik">
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return nextSlide('riwayat','ques5','answ1','ques2')">NEXT</button>
+                    </div>
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return back('ques1','ques2')">PREV</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="question" id="ques3">
+            <form action="#" method="GET">
+                <div class="konten">
+                    <h2>Pada 14 Hari Terakhir:</h2>
+                    <ul>
+                        <li>
+                            <input type="checkbox" name="tinggal" id="tg1">
+                            <label for="tg1">Tinggal Atau Bepergian saya di negara/wilayah indonesia dengan transmisi lokal</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tinggal" id="tg2">
+                            <label for="tg2">Tinggal atau bekerja di tempat berisiko (pengungsian, asrama, dll)</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="tinggal" id="tg3">
+                            <label for="tg3">Bekerja di fasyankes, melakukan investigasi, pemantauan kasus, dan kontak</label>
+                        </li>
+                    </ul>
+                </div>
+                <div class="klik">
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return nextSlide('tinggal','dua','answ2','ques3')">NEXT</button>
+                    </div>
+                    <div class="btn1">
+                        <button class="btn yes" onclick="return back('ques1','ques3')">PREV</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="question" id="answ1">
+            <p>Istirahat yang cukup dan periksakan diri ke Fasilitas kesehatan untuk tata laksana lebih lanjut.</p>
+        </div>
+        <div class="question" id="answ2">
+            <p>Selalu jaga kesehatan dan Terapkan protokol kesehatan dalam beraktivitas.</p>
+        </div>
+        <div class="gabung" id="dua">
+            <div class="questionH" id="answ3">
+                <p>Lakukan monitoring kesehatan mandiri selama 14 hari.</p>
+            </div>
+            <div class="questionH" id="ques4">
+                <form action="#" method="GET">
+                    <div class="konten">
+                        <h2>Apakah anda mengalami gejala seperti yang disebutkan ? </h2>
+                    </div>
+                    <div class="klik2">
+                        <div class="btn1">
+                            <button class="btn yes" onclick="return back('ques5','dua')">IYA</button>
+                        </div>
+                        <div class="btn1">
+                            <button class="btn no" onclick="return back('clue6','dua')">TIDAK</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="question" id="ques5">
+            <h2 class="text">SUSPEK</h2>
+            <p>Periksakan diri untuk dilakukan pengambilan spesimen dan tatalaksana lebih lanjut</p>
+            <h2>Hasil Tes</h2>
+            <div class="klik2">
+                <button class="btn yes" onclick="return back('ques6','ques5')">POSITIF (+)</button>
+                <button class="btn no" onclick="return back('ques7','ques5')">NEGATIF (-)</button>
+            </div>
+        </div>
+        <div class="question" id="ques6">
+            <p>POSITIF (+)</p>
+            <p>KASUS KONFIRMASI</p>
+            <p>SEGERA! konsultasi dengan petugas kesehatan setempat</p>
+        </div>
+        <div class="question" id="ques7">
+            <p>2 KALI NEGATIF (-)</p>
+            <p>DISCARDED (BUKAN COVID-19)</p>
+            <p>- Selalu Jaga Kesehatan</p>
+            <p>- terapkan Protokol kesehatan dalam beraktivitas</p>
+        </div>
+        <!-- jika clue 3 False -->
+        <div class="question" id="clue6">
+            <h2>JIKA ANDA MENGALAMI:</h2>
+            <p>anosmia (hilangnya kemampuan indra penciuman) atau ageusia (hilangnya kemampuan indra perasa)</p>
+            <form action="#" method="get">
+                <input type="radio" name="alam" id="ya" value="iya" onclick="return back('ques5','clue6')">
+                <label for="ya">iya</label>
+                <input type="radio" name="alam" id="ga" value="tidak" onclick="return back('clue7','clue6')">
+                <label for="ga">tidak</label>
+            </form>
+        </div>
+        <!-- jika clue 6 False -->
+        <div class="question" id="clue7">
+            <p>jika anda pernah kontak dengan kasus probable/konfirmasi COVID-19 dan anda mempunyai gejala  atau tidak bergejala, segera lakukan KARANTINA MANDIRI dan SEGERA MELAPORKAN ke fasilitas pelayanan kesehatan atau dinas kesehatan setempat</p>
+        </div>
+    </div>
+</body>
+</html>

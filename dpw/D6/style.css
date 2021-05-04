@@ -1,0 +1,553 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  background-color: #e6e6e6;
+}
+/*=========================css untuk bagian homepage atau index===============================*/
+/*---------------------------------------------menu-------------------------------------------*/
+nav {
+  margin: 0 auto;
+  padding: 10px 0;
+  background: transparent;
+  z-index: 1;
+  text-align: right;
+  padding-right: 6%;
+}
+  /*menu membuat grub list*/
+  .menu-ul li {
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    list-style-type: none;
+    display: inline-block;
+  }
+  .menu-ul li:hover {
+    background: none;
+  }
+    /*membuat list link*/
+    .menu-ul li a {
+      text-decoration: none;
+      color: #7cd0e4;
+      border-radius: 15px;
+      border: 1px solid white;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: block;
+      padding: 0 25px;
+      line-height: 30px;
+      z-index: 1;
+      transition-duration: 0.2s;
+    }
+    .menu-ul li a:hover {
+      border: 1px solid white;
+      border-radius: 15px;
+      color: white;
+      transition-duration: 0.2s;
+    }
+
+/*------------------------------------------------------------header------------------------------------*/
+.header {
+  margin-top: -55px;
+  background: url('assets/bg.png');
+  background-color: white;
+  height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+  /*header bagian info*/
+  .header-info {
+    padding-top: 150px;
+    padding-left: 200px;
+    padding-right: 40px;
+    height: 500px;
+    width: 40%;
+    float: left;
+  }
+    .header-judul {
+      font-weight: bold;
+      font-size: 20px;
+    }
+    .header-isi {
+      margin-top: 20px;
+      text-align: justify;
+    }
+    /*header bagian tombol register*/
+    .header-daftar, .header-daftar:hover {
+      color: #7cd0e4;
+      font-weight: 600;
+      text-transform: uppercase;
+      display: block;
+      padding: 5px;
+      width: 300px;
+      line-height: 30px;
+      text-decoration: none;
+      border: 1px solid white;
+      position: relative;
+      left: 55%;
+      text-align: center;
+      background-color: white;
+      margin-top: 200px;
+      border-radius: 50px;
+    }
+    .header-daftar:hover {
+      background-color: transparent;
+      color: white;
+      transition-duration: 0.2s;
+    }
+  /*header bagian gambar*/
+  .header-img {
+    padding-top: 150px;
+    padding-left: 40px;
+    padding-right: 200px;
+    float: right;
+  }
+    .header-img img {
+      width: 150px;
+    }
+
+/*-----------------------------------------------sidebar---------------------------------------------*/
+.sidebar {
+  float: left;
+  height: 450px;
+  width: 20%;
+}
+  /*sidebar bagian judul*/
+  .sidebar span {
+    background-color: white;
+    padding: 10px;
+    position: relative;
+    display: block;
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+  }
+  /*sidebar bagian grub list*/
+  .sidebar ul {
+    width: 100%;
+    background-color: white;
+    height: 1000px;
+  }
+    /*sidebar bagian list*/
+    .sidebar ul li {
+      list-style: none;
+      width: 100%;
+    }
+      /*sidebar bagian link*/
+      .sidebar ul li a, .sidebar ul li a:hover {
+        display: block;
+        text-decoration: none;
+        margin-left: 40px;
+        color: #555;
+      }
+      .sidebar ul li a {
+        padding: 10px;
+      }
+      .sidebar ul li a:hover {
+        color: black;
+        font-weight: bold;
+      }
+
+/*-------------------------------------content-------------------------------*/
+.content {
+  width: 80%;
+  min-height: 1000px;
+  float: right;
+  margin-top: 35px;
+  background-color: white;
+  color: #555;
+}
+  /*content bagian judul*/
+  .content .content-judul {
+    padding: 30px;
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+  }
+  /*content bagian sub judul*/
+  .content span {
+    padding: 30px;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+  }
+  /*content bagian grub list*/
+  .content ul {
+    padding-left: 60px;
+  }
+  /*content bagian isi paragraf*/
+  .content p {
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: justify;
+  }
+
+/*----------------------------------------footer----------------------------*/
+.footer {
+  margin-top: 1000px;
+  background: url('assets/bg-contactUs.png');
+  background-color: white;
+  height: 650px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+  /*footer bagian judul*/
+  .footer-judul {
+    position: absolute;
+    color: black;
+    padding-top: 50px;
+    left: 40%;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  /*footer bagian media*/
+  .footer-media {
+    margin-top: 150px;
+    margin-left: 50px;
+    position: absolute;
+    float: left;
+    width: 45%;
+    height: 350px;
+    border-right: 2px solid black;
+  }
+    /*footer bagian grub list*/
+    .footer-media ul {
+      list-style: none;
+      padding-top: 40px;
+    }
+      /*footer bagian list*/
+      .footer-media li {
+        padding: 10px;
+      }
+      .footer-icon {
+        width: 50px;
+      }
+      .footer-media li span {
+        display: inline-block;
+        position: absolute;
+        padding-top: 20px;
+        padding-left: 20px;
+      }
+  /*footer bagian form*/
+  .footer-form {
+    position: relative;
+    float: right;
+    margin-top: 150px;
+    height: 400px;
+  }
+    /*footer bagian input*/
+    .footer-input, .footer-input:hover {
+      width: 80%;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ccccff;
+      border-radius: 5px;
+      transition-duration: 0.2s;
+    }
+    /*footer bagian text area*/
+    .footer-form form textarea, .footer-form form textarea:hover, .footer-form form textarea:focus {
+      text-align: left;
+      height: 100px;
+    }
+    .footer-input:hover {
+      background-color: #ccccff;
+    }
+    /*footer bagian button*/
+    .footer-submit, .footer-submit:hover {
+      width: 300px;
+      display: block;
+      position: relative;
+      left: 20%;
+      padding: 20px;
+      border-radius: 50px;
+      border: 1px solid white;
+      background-color: #7cd0e4;
+      color: white;
+      cursor: pointer;
+    }
+    .footer-submit:hover {
+      border: 1px solid #7cd0e4;
+      background-color: white;
+      color: #7cd0e4;
+      transition-duration: 0.2s;
+    }
+  /*footer bagian copyright*/
+  .footer-bawah {
+    position: relative;
+    background-color: black;
+    display: block;
+    color: white;
+    clear: both;
+    height: 80px;
+    text-align: center;
+  }
+
+
+/*====================================css untuk halaman register================================*/
+/*-----------------------------------------register---------------------------------------------*/
+
+/*register bagian background body*/
+.register {
+  background: url('assets/bg-form.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*register bagian mambuat box*/
+.register-panel {
+  position: absolute;
+  display: block;
+  left: 20%;
+  margin-top: 100px;
+  border-radius: 30px;
+  padding: 10px;
+  width: 55%;
+  background-color: white;
+}
+  /*register bagian judul*/
+  .register-judul {
+    position: relative;
+    left: 40%;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 100px;
+  }
+  /*register bagian form sub judul*/
+  .register-panel form span {
+    font-weight: bold;
+  }
+  /*register bagian inputan dan dropdown*/
+  .register-panel form input, .register-panel form select, .register-panel form input:hover {
+    margin-top: 10px;
+    width: 97%;
+    padding: 10px;
+    border: none;
+    background-color: #ececec;
+    border: 1px solid white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    transition-duration: 0.2s;
+    text-align: center;
+  }
+  /*register bagian dropdown*/
+  .register-panel form select {
+    width: 100%;
+  }
+  .register-panel form input:hover {
+    background-color: transparent;
+    border: 1px solid #7bcfe4;
+  }
+  /*register bagian jenis kelamin*/
+  .register-gender {
+    width: 40%;
+  }
+    /*register bagian jenis kelamin inputan*/
+    .register-panel form .register-gender-input, .register-panel form .register-gender-input:hover, .register-panel form .register-gender-input:focus {
+      width: 30px;
+    }
+    /*register bagian jenis kelamin judul*/
+    .register-panel form .register-gender-judul {
+      font-size: 14px;
+    }
+    /*register bagian grub panel sub judul*/
+    .register-panel .register-grub span {
+      width: 49%;
+      display: inline-block;
+    }
+    /*register bagian grub panel inputan */
+    .register-panel .register-grub input {
+      width: 46%;
+    }
+    .register-panel .register-grub input:hover {
+      background-color: transparent;
+      border: 1px solid #7bcfe4;
+      width: 46%;
+      transition-duration: 0.2s;
+    }
+
+  /*register bagian grub panel jenis kelamin*/
+  .register-grub .register-gender {
+    width: 100%;
+    display: inline-block;
+  }
+    /*register bagian grub panel jenis kelamin radio button*/
+    .register-grub .register-gender .register-gender-input, .register-grub .register-gender .register-gender-input:hover {
+      width: 60px;
+    }
+    /*register bagian grub panel jenis kelamin label*/
+    .register-grub .register-gender .register-gender-judul, .register-grub .register-gender .register-gender-judul:hover {
+      width: 100px;
+    }
+
+  /*register bagian text area*/
+  .register-panel .register-keterangan {
+    margin-top: 10px;
+    width: 100%;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+
+  /*register bagian button*/
+  .register-panel .submit {
+    position: relative;
+    left: 25%;
+    border: 2px solid white;
+    width: 50%;
+    padding: 20px;
+    background-color: #73c9de;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .register-panel .submit:hover, .register-panel .submit:focus {
+    position: relative;
+    left: 25%;
+    border: 2px solid #73c9de;
+    width: 50%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  /*register bagian checkbox*/
+  .register-panel .register-box {
+    background-color: #e6e6e6;
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+  }
+  .register-panel .register-box input, .register-panel .register-box input:hover {
+    display: inline-block;
+    width: 100px;
+  }
+  /*register bagian untuk notifikasi*/
+  .register-panel form p{
+    color: red;
+    margin-bottom: 10px;
+  }
+
+/*================================================css untuk halaman about us==================================*/
+/*---------------------------------------------------about us------------------------------------------*/
+
+/*about bagian background body*/
+.about {
+  background: url('assets/about-us.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*about bagian isi*/
+.about-content {
+  margin-top: 20px;
+}
+  /*about bagian judul*/
+  .about-content span {
+    display: inline-block;
+    width: 80%;
+    background-color: white;
+    position: relative;
+    left: 10%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 35px;
+  }
+  /*about bagian membuat gambar profil*/
+  .about-content-img {
+    width: 100%;
+    margin-top: 50px;
+  }
+    /*about bagian untuk mengatur posisi gambar*/
+    .about-content-img img {
+      position: relative;
+      left: 10%;
+      border-radius: 100px;
+      background-color: white;
+      width: 200px;
+      height: 200px;
+      margin-left: 5%;
+    }
+
+  /*about bagian deskripsi membuat tempat*/
+  .about-content-panel {
+    width: 100%;
+  }
+    /*about bagian membuat box deskripsinya per bagian*/
+    .about-content-panel div {
+      position: relative;
+      left: 9%;
+      width: 13%;
+      height: 300px;
+      margin-top: 10px;
+      margin-left: 5%;
+      margin-bottom: 100px;
+      background-color: white;
+      display: inline-block;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+    }
+      /*about bagian dalam box , membuat grub untuk lis*/
+      .about-content-panel div ul{
+        list-style: none;
+      }
+        /*about untuk mengatur space atas judul*/
+        .about-list-space{
+          margin-top: 20px;
+          font-weight: bold;
+        }
+  /*about bagian source*/
+  .about-source {
+    display: block;
+    margin: 40px;
+    background-color: #ffffffb3;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+    .about-source table{
+      display: inline-block;
+      border: 1px solid blue;
+      border-radius: 10px;
+      border-collapse: collapse;
+    }
+    .about-source table tr,.about-source table th,.about-source table td{
+      border :1px solid black;
+    }
+    .about-source table tr{
+      height: 50px;
+    }
+    .about-source table th{
+      padding: 10px;
+    }
+    .about-source-nama{
+      width: 150px;
+    }

@@ -1,0 +1,16 @@
+.label{
+	width: 200px;
+	text-align: right;
+	margin-right: 10px;
+	float: left;
+}
+div{
+	margin-bottom: 10px;
+}
+
+.submit{
+	margin-left: 210px;
+}
+fieldset{
+	background-color: lightblue;
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>image sprite</title>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #000;
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .judul {
+        font-size: 4em;
+        text-align: center;
+        margin: 50px;
+    }
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .gallery {
+        margin: 10px;
+        padding: 10px;
+        width: max-content;
+        box-sizing: border-box;
+        border: 20px solid black;  
+        border-image-source: url(https://www.w3schools.com/css/border.png);
+        border-image-slice: 20;
+        border-image-repeat: stretch;
+    }
+    h1 {
+        text-align: center;
+    }
+    a {
+        display: block;
+        height: 400px;
+        padding-left: 400px;
+        border: 5px solid greenyellow;
+        border-radius: 40px;
+        background: url(https://pbs.twimg.com/media/E0cryt5UUAAx4Tn?format=jpg&name=4096x4096) no-repeat; /* As all link share the same background-image */
+    }
+    a:hover {
+        border: 5px solid white;
+    }
+    a.gmb1 {
+        background-position: 0 0;
+    }
+    a.gmb2 {
+        background-position: 0 -400px;
+    }
+    a.gmb3 {
+        background-position: 0 -800px;
+    }
+    a.gmb4 {
+        background-position: 0 -1200px;
+    }
+    a.gmb5 {
+        background-position: 0 -1600px;
+    }
+    a.gmb6 {
+        background-position: 0 -2000px;
+    }
+    a.gmb7 {
+        background-position: 0 -2400px;
+    }
+    a.gmb8 {
+        background-position: 0 -2800px;
+    }
+    a.gmb9 {
+        background-position: 0 -3200px;
+    }
+    a.gmb10 {
+        background-position: 0 -3600px;
+    }
+</style>
+</head>
+<body>
+    <div class="judul">Pantai Di Kabupaten Sumenep</div>
+    <div class="container">
+        <div class="gallery">
+            <a class="gmb1" href="#"></a>
+            <h1>Pantai Slopeng</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb2" href="#"></a>
+            <h1>pantai sembilan</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb3" href="#"></a>
+            <h1>pantai gililabak</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <a class="gmb4" href="#"></a>
+            <h1>pantai giliyang</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb5" href="#"></a>
+            <h1>kangean island</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb6" href="#"></a>
+            <h1>pantai gili pandan</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <a class="gmb7" href="#"></a>
+            <h1>pantai lombang</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb8" href="#"></a>
+            <h1>pantai ponjuk</h1>
+        </div>
+        <div class="gallery">
+            <a class="gmb9" href="#"></a>
+            <h1>pantai ropet</h1>
+        </div>
+    </div>
+    <div class="container">
+        <div class="gallery">
+            <a class="gmb10" href="#"></a>
+            <h1>pantai badur</h1>
+        </div>
+    </div>
+</body>
+</html>

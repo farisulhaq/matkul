@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <input type="text" name="nama" id="nama" placeholder="Nama Lengkap">
+        <input type="text" name="angka" id="angka" placeholder="Angka">
+        <button onclick="event.preventDefault();cetak()">Cetak</button>
+        <p id="print"></p>
+    </form>
+    <script>
+        function cetak(){
+            var nama = document.getElementById("nama").value;
+            var num = parseInt(document.getElementById("angka").value);
+            hasil = ""
+            for (var i = 1; i <= num; i++){
+                hasil += i + '. ' + nama + '<br>'
+            }
+            document.getElementById("print").innerHTML = hasil
+        }
+    </script>
+</body>
+</html>

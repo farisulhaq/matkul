@@ -7,9 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello world!</h1>
-<script src="latihan.js">
-    
-</script>
+    <form action='' onsubmit="return validate(this);">
+        <input type="checkbox" name="sel[]" value="buku">Buku
+        <input type="checkbox" name="sel[]" value="pena">Pena
+        <input type="checkbox" name="sel[]" value="pensil">Pensil
+        <input type="submit" name="submit" value="Submit" />
+    </form>
+    <script>
+        function validate(){
+            var checked=false;
+            var elements = document.getElementsByName("sel[]");
+            alert(elements.checked)
+            for(var i=0; i < elements.length; i++){
+                if(elements[i].checked) {
+                    checked = true;
+                }
+            }
+            if (!checked) {
+                alert('Pilih Salah Satu');
+            }
+            return checked;
+        }
+        </script>
 </body>
 </html>

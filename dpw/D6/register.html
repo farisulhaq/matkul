@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<title>register</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="validasi.js"></script>
+	<meta charset="utf-8">
+</head>
+<body class="register">
+	<!-- register bagian panel -->
+	<div class="menu">
+		<nav>
+			<ul class="menu-ul">
+				<li><a class="menu-active" href="index.html">Home</a></li>
+				<li><a href="index.html?#content">Persyaratan</a></li>
+				<li><a href="about-us.html">About Us</a></li>
+				<li><a href="index.html?#contact">Contact</a></li>
+				<li><a href="register.html">Daftar</a></li>
+			</ul>
+		</nav>
+	</div>
+	<div class="register-panel">
+		<!-- register bagian judul -->
+		<span class="register-judul">REGISTER</span>
+		<!-- register bagian form -->
+		<form method="post" action="berhasil.html"  onsubmit="return validate();">
+			<span>Nama Tim </span><span style="color: red">*</span>
+			<!-- register bagian inputan -->
+			<input type="text" name="Nama_tim" id="Nama_tim" onkeypress="return hapusNamatimError(event);">
+			<p id="namatimError"></p>
+			<span>Nama Ketua </span><span style="color: red">*</span>
+			<input type="text" name="Nama_ketua" id="Nama_ketua" onkeypress="return string(event);">
+			<p id="Nama_ketuaError"></p>
+			<span>Tanggal lahir</span><span style="color: red">*</span>
+			<input type="date" name="tgl" id="tgl" onkeypress="return hapusTglErr(event);">
+			<p id="tglErr"></p>
+			<span>Jenis Kelamin </span><span style="color: red">*</span>
+			<!-- register bagian radio button -->
+			<div class="register-gender">
+				<input class="register-gender-input" type="radio" name="jk" value="1" id="male" onclick="return hapusError(event)"> <span class="register-gender-judul">Laki - Laki</span>
+				<input class="register-gender-input" type="radio" name="jk" value="2" id="female" onclick="return hapusError(event)"> <span class="register-gender-judul">Perempuan</span>
+				<p id="jkError"></p>
+			</div>
+			<span>Kabupaten </span>
+			<!-- register bagian dropdown -->
+			<select name="gender" id="kota" onclick="return hapusError(event)">
+				<option value="-">--Pilih Kabupaten--</option>
+				<option value="1">Sumenep</option>
+				<option value="2">Pamekasan</option>
+				<option value="3">Sampang</option>
+				<option value="4">Bangkalan</option>
+			</select>
+			<p id="kotaError"></p>
+			<span>Nomer Telepon </span><span style="color: red">*</span>
+			<input type="text" name="nomor"  id="nomor" onkeypress="return integer(event);" placeholder="08xxxxxxxx">
+			<p id="Nomorerror"></p>
+			<span>E-mail </span>
+			<input type="text" name="mail" id="mail" onkeypress="return hapusMailerror(event);" placeholder="xxx@domain.com">
+			<p id="mailError"></p>
+			<!-- register bagian panel grub -->
+			<div class="register-grub">
+				<!-- register bagian grub judul -->
+				<span>Anggota 1</span>
+				<span>Anggota 2</span>
+				<input type="text" name="Anggota1" id="Anggota1" onkeypress="return string2(event);">
+				<input type="text" name="Anggota2" id="Anggota2" onkeypress="return string3(event);">
+				<p id="anggota1Err"></p>
+				<p id="anggota2Err"></p>
+				<span>Jenis Kelamin</span>
+				<span>Jenis Kelamin</span>
+				<div class="register-gender">
+					<!-- register bagian grub radio button -->
+					<input class="register-gender-input" type="radio" name="jk1" value="1" id="male1" onclick="return hapusError(event)"> <span class="register-gender-judul">Laki - Laki</span>
+					<input class="register-gender-input" type="radio" name="jk1" value="2" id="female1" onclick="return hapusError(event)"> <span class="register-gender-judul">Perempuan</span>
+					<input class="register-gender-input" type="radio" name="jk2" value="1" id="male2" onclick="return hapusError(event)"> <span class="register-gender-judul">Laki - Laki</span>
+					<input class="register-gender-input" type="radio" name="jk2" value="2" id="female2" onclick="return hapusError(event)"> <span class="register-gender-judul">Perempuan</span>
+					<p id="angErr1"></p>
+					<p id="angErr2"></p>
+				</div>
+			</div>
+			<span>Keterangan</span>
+			<!-- register bagian text area -->
+			<textarea class="register-keterangan">
+1. '*' harus di isi
+2. ngisinya jangan sembarangan ya guys
+			</textarea>
+			<div class="register-box">
+			<!-- register bagian checkbox -->
+			<input type="checkbox" name="box" id="box" onclick="return hapusError(event);">Saya menyetujui syarat dan ketentuan <a href="index.html?#content">klik disini</a>
+			</div>
+			<p id="boxErr"></p>
+			<input id="tombol" class="submit" type="submit" value="DAFTAR">
+		</form>
+	</div>
+</body>
+</html>

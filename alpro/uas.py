@@ -28,17 +28,35 @@
 #     if inp1 == 't':
 #         start = False
 
-a = []
-for i in range(4):
-    b = []
-    for j in range(4):
-        if i == j or i < j:
-            b.append(1)
-        else:
-            b.append(0)
-    a.append(b)
-for i in range(len(a)):
-    print("|",end="")
-    for j in range(len(a[0])):
-        print("%4d"%(a[i][j]),end="")
-    print("%4s"%"|")
+# a = []
+# for i in range(4):
+#     b = []
+#     for j in range(4):
+#         if i == j or i < j:
+#             b.append(1)
+#         else:
+#             b.append(0)
+#     a.append(b)
+# for i in range(len(a)):
+#     print("|",end="")
+#     for j in range(len(a[0])):
+#         print("%4d"%(a[i][j]),end="")
+#     print("%4s"%"|")
+
+a = [1,2,3,4,5,5,6,6]
+b = {}
+c = []
+temp = 0
+for i in a:
+    if i in b:
+        b[i] += 1
+    else:
+        b[i] = 1
+
+    if b[i] > temp:
+        temp = b[i]
+
+for i in b:
+    if b[i] == temp:
+        c.append(i)
+print(b,c)

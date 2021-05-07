@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            text-transform: capitalize;
+            background-color: rgb(23, 130, 145)
+        }
+        .container {
+            box-sizing: border-box;
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 5px 10px greenyellow;
+            border-radius: 10px;
+        }
+        .soal {
+            background-color: greenyellow;
+            box-sizing: border-box;
+            padding: 1px 20px 20px 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FOR ARRAY IF</h1>
+        <div class="soal">
+            <h2>Soal Nomer 1</h2>
+            <h3>Hitung z = 2x + 15x, dengan nilai x:bilangan genap dari 10 s/d 50</h3>
+            <button type="button" onclick="tes1()">Show</button>
+            <button type="button" onclick="hapus('tes1')">Hide</button>
+            <p id="tes1"></p>
+
+        </div>
+        <div class="soal">
+            <h2>Soal Nomer 2</h2>
+            <h3>buat fungsi untuk menampilkan 20 angka bulat acak dari a s/d b. data acak disimpan di array. note : a dan b diinputkan.</h3>
+            <p>hasil aray random = <span id="tes2"></span></p>
+            <form action="#" method="POST" onsubmit="return tes2()">
+                <input type="text" name="a" id="a" placeholder="Masukkan a">
+                <input type="text" name="b" id="b" placeholder="Masukkan b">
+                <input type="submit" value="Ok">
+            </form>
+        </div>
+        <div class="soal">
+            <h2 onclick="tes3()">Soal Nomer 3</h2>
+            <h3>sesuai dengan hasil no 2, lakukan perhitungan : min,max,mean,modus, dan median</h3>
+            <p>array = <span id="arr"></span></p>
+            <p>nilai min = <span id="min"></span></p>
+            <p>nilai max = <span id="max"></span></p>
+            <p>nilai mean = <span id="mean"></span></p>
+            <p>nilai modus = <span id="modus"></span></p>
+            <p>nilai median = <span id="median"></span></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

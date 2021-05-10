@@ -50,9 +50,6 @@
     display: block;
 }
 
-#navigasi li:hover ul ul {
-    display:none;
-}
 img {
     width:200px;
     margin-left: auto;

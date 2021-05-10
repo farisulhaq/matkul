@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form pemesanan</title>
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+	<div class="container">
+		<header>
+        	<h1>OrderIt</h1>
+        	<span>Aplikasi pemesanan tiket menonton kerapan sapi</span>
+    	</header>
+		<nav>
+			<a href="index.html">Home</a>
+			<a href="index.html">Evaluation</a>
+			<a href="index.html">About us</a>
+		</nav>
+
+		<aside class="reg">
+	        <!-- membuat sidebox atau kotak opsi event lain -->
+	        <div class="sidebox">
+	            <img src="images/ks_2.jpg" alt="kerapan sapi">
+	            <span>Lokasi : Pamekasan</span>
+	            <span>Tanggal : 15 Juni 2021</span>
+	            <!-- div untuk menjadi wadah dari harga dan tombol pre-order -->
+	            <div class="more">
+	                <span class="harga">Rp.15.000,00</span>
+	                <a href="" class="preorder">Pre-order</a>
+	            </div>
+	        </div>
+	        <div class="sidebox">
+	            <img src="images/ks_3.jpg" alt="kerapan sapi">
+	            <span>Lokasi : Sampang</span>
+	            <span>Tanggal : 21 Juni 2021</span>
+	            <div class="more">
+	                <span class="harga">Rp.15.000,00</span>
+	                <a href="" class="preorder">Pre-order</a>
+	            </div>
+	        </div>
+	        <div class="sidebox">
+	            <img src="images/ks_4.jpeg" alt="kerapan sapi">
+	            <span>Lokasi : Blega, Bangkalan</span>
+	            <span>Tanggal : 18 Juli 2021</span>
+	            <div class="more">
+	                <span class="harga">Rp.15.000,00</span>
+	                <a href="" class="preorder">Pre-order</a>
+	            </div>
+	        </div>
+	        <div class="sidebox">
+	            <img src="images/ks_5.jpg" alt="kerapan sapi">
+	            <span>Lokasi : Sumenep</span>
+	            <span>Tanggal : 06 Agustus 2021</span>
+	            <div class="more">
+	                <span class="harga">Rp.15.000,00</span>
+	                <a href="" class="preorder">Pre-order</a>
+	            </div>
+	        </div>
+	        <!-- ditambah class cs untuk membedakannya dari box yang lain -->
+	        <div class="sidebox cs">
+	            <span>Coming soon</span>
+	        </div>
+    	</aside>
+		<div class="content">
+			<form name="formRegis" action="index.html" method="post" onsubmit="return validate()">
+				<h2>Pengisian Data Pemesanan</h2>
+				<div class="texbox">
+					<label for="user">Nama</label>
+					<input type="text" name="user" id="user" placeholder="Username" onkeypress="hapusError('user','namaerr')">
+					<p id="namaerr"></p>
+				</div>
+				<div class="texbox">
+					<label for="email">Email</label>
+					<input type="text" name="email" id="email" placeholder="Email" onkeypress="hapusError('email','emailerr')">
+					<p id="emailerr"></p>
+				</div>
+				<div class="texbox">
+					<label for="telep">Telephone</label>
+					<div class="telp">
+						<select>
+							<option value="ind">🇮🇩+62</option>
+							<option value="malay">🇲🇾+60</option>
+							<option value="filip">🇵🇭+63</option>
+							<option value="sg">🇸🇬+65</option>
+							<option value="thai">🇹🇭+66</option>
+						</select>
+						<input type="text" id="telep" placeholder="Telepon" onkeypress="hapusError('telep','hperr')">
+					</div>
+					<p id="hperr"></p>
+				</div>
+				<div class="bdate">
+					<label for="tgl">Tanggal Lahir</label>
+					<input type="date" name="date" id="tgl" onchange="hapusError('tgl','tglerr')">
+					<p id="tglerr"></p>
+				</div>
+				<div class="radio">
+					<p>Metode Pembayaran :</p>
+					<label for="bayar"><input type="radio" name="metode" id="bayar" value="gopay" onclick="radioError()">&emsp;<img src="images/gopay.png">&emsp;Gopay</label>
+					<label for="bayar2"><input type="radio" name="metode" id="bayar2" value="ovo" onclick="radioError()">&emsp;<img src="images/ovo.png">&emsp;Ovo</label>
+					<label for="bayar3"><input type="radio" name="metode" id="bayar3" value="BCA" onclick="radioError()">&emsp;<img src="images/BCA.png">&emsp;Bank BCA</label>
+					<label for="bayar4"><input type="radio" name="metode" id="bayar4" value="BRI" onclick="radioError()">&emsp;<img src="images/BRI.png">&emsp;Bank BRI</label>
+					<label for="bayar5"><input type="radio" name="metode" id="bayar5" value="BNI" onclick="radioError()">&emsp;<img src="images/BNI.png">&emsp;Bank BNI</label>
+					<label for="bayar6"><input type="radio" name="metode" id="bayar6" value="Mandiri" onclick="radioError()">&emsp;<img src="images/Mandiri.png">&emsp;Bank Mandiri</label>
+					<label for="bayar7"><input type="radio" name="metode" id="bayar7" value="Alfamart" onclick="radioError()">&emsp;<img src="images/Alfamart.png">&emsp;Alfamart</label>
+					<label for="bayar8"><input type="radio" name="metode" id="bayar8" value="Indomart" onclick="radioError()">&emsp;<img src="images/Indomart.png">&emsp;Indomaret</label>
+					<p id="payerr"></p>
+				</div>
+				<input type="submit" value="pesan sekarang" class="order-btn"></input>
+			</form>
+		</div>
+		<footer>
+        	<p>&copy;2021 Kelompok 8 tugas aplikasi DPW-B</p>
+    	</footer>
+	</div>
+	<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald:wght@200&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: rgb(163, 163, 231);
+        }
+        .judul {
+            background-color: rgb(32, 31, 138);
+            font-size: 20px;
+            color: white;
+            overflow: hidden;
+            padding: 10px;   
+        }
+        .judul img {
+            float: left;
+            width: 100px;
+            height: 100;
+            border-radius: 50%;   
+        }
+        .judul .nama {
+            text-align: center;
+        }
+        nav {
+            background-color: rgb(54, 85, 151);
+        }
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+        }
+        li {
+            float: left;
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: white;
+        }
+        li a:hover {
+            background-color: rgb(65, 136, 168);
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            max-width: 180px;
+            background-color: rgb(18, 50, 119);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 12px 14px;
+            text-decoration: none;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(28, 63, 138);
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        aside {
+            margin: 10px;
+            padding: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: rgb(103, 103, 201);
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 5px;
+        }
+        table td a:link {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="judul">
+        <div class="hero">
+            <img src="https://pbs.twimg.com/profile_images/1372377869347811331/b2qy-DOy.jpg" alt="faris" width="100px">
+        </div>
+        <div class="nama">
+            <h1>Ahmad Farisul Haq</h1>
+            <p>200411100171</p>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Honda</a>
+                <div class="dropdown-content">
+                    <a href="#">Honda CB150 Verza</a>
+                    <a href="#">Honda New Revo X</a>
+                    <a href="#">Honda CB150R.</a>
+                    <a href="#">Honda All New Supra GTR 150</a>
+                    <a href="#">Honda Supra X 125 FI</a>
+                    <a href="#">Honda PCX</a>
+                    <a href="#">Honda Vario 150</a>
+                    <a href="#">Honda Vario 125</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Yamaha</a>
+                <div class="dropdown-content">
+                    <a href="#">Yamaha Gear 125 S</a>
+                    <a href="#">Yamaha Gear 125</a>
+                    <a href="#">Yamaha FreeGo S</a>
+                    <a href="#">Yamaha Mio S</a>
+                    <a href="#">Yamaha Xride S</a>
+                    <a href="#">Yamaha Nmax</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Suzuki</a>
+                <div class="dropdown-content">
+                    <a href="#">Suzuki Satria F150</a>
+                    <a href="#">Suzuki GSX-R150</a>
+                    <a href="#">Suzuki GSX-S150</a>
+                    <a href="#">Suzuki GSX 150</a>
+                    <a href="#">Suzuki New Smash FI</a>
+                    <a href="#">Suzuki Address FI</a>
+                    <a href="#">Suzuki Address Playful</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>Ahmad Farisul Haq</td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td>:</td>
+                <td>200411100171</td>
+            </tr>
+            <tr>
+                <td>TTL</td>
+                <td>:</td>
+                <td>Sumenep, 12 April 2002</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td>Dusun Mantajun, Dasuk, Sumenep</td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>:</td>
+                <td>Mahasiswa</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td><a href="mailto:ahmadfarisulhaqq@gmail.com">ahmadfarisulhaqq@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>Whatsapp</td>
+                <td>:</td>
+                <td><a href="http://wa.me/6287881735505">087881735505</a></td>
+            </tr>
+        </table>
+    </aside>
+</body>
+</html>
+

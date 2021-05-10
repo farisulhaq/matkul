@@ -135,7 +135,7 @@ function validate(){
 	}
 	//jika ada error maka tidak bisa di submit
 	if (namatimError != '' || Nama_ketuaError != '' || jkError != ''|| kotaError != '' || Nomorerror != '' || mailError!='' || angErr1 !='' || angErr2!='' || boxErr!='' || anggota1Err!='' || anggota2Err!='') {
-		return false
+		return false;
 	}
 	else
 	{
@@ -202,7 +202,6 @@ function string3(e) {
 function integer(e) {
 	if ((e.keyCode!=13) && (e.keyCode < 48) || (e.keyCode >57) || (e.keyCode ==15)) {
 	   	Nomorerror = "Inputan harus angka";
-	   	Nomorerror.className="Nomorerror";
 		nomor.style.border="2px solid red"
 		document.getElementById( "Nomorerror" ).innerHTML = Nomorerror;
 		return false

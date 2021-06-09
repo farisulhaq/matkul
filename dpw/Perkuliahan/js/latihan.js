@@ -67,9 +67,42 @@ for ( a = 0; a < 6; a++ ) {
         y += ' '
     }
     for ( b = 0; b <= x-1; b++ ) {
-        y += '* '
+        y += '*'
     }
     x -= 1
     y += '\n'
 }
 console.log(y)
+
+y += ""
+var x = 5;
+for (var i = 0; i < x; i++){
+    for (var y = 1; y < (x - i); y ++){
+        document.write("")
+        y += ' '
+    }
+    for (var j = 0; j < (i*2)+1;j++){
+        document.write("*")
+        y += '*'
+    }
+    document.write("<br>")
+    y += '\n'
+}
+console.log(y)
+// var baris, i = 0;
+// var nilai_prompt = prompt("Tinggi: ", ""); 
+// var tinggi=parseInt(nilai_prompt);
+
+// for (baris = 0; baris <= tinggi ; baris++) {
+
+// // memBuat sejumlah spasi
+// for (i = 1; i <= tinggi - baris; i++) {
+// document.write(" "); // Karakter spasi
+//     }
+
+// // menampilkan bintang
+// for (i = 1; i < 2 * baris; i++) {
+// document.write("*"); }
+
+// // Pindah baris
+// document.write("\n"); }

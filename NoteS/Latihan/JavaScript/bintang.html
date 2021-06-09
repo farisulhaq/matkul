@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .merah {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p id="id">saya</p>
+    <p id="en"></p>
+</body>
+
+<script>
+    // var temp = 0
+    // while (temp <= 1){
+    //     var angka = parseInt(prompt("angka 3 - 9"))
+    //     if (angka){
+    //         document.write(`anda memasukkan angka ${angka}`)
+    //         break
+    //     }else {
+    //         alert("memasukkan angka range 3 - 9")
+    //         temp++
+    //     }      
+    // }
+    // var y = ''
+    // var tinggi = parseInt(prompt("masukkan tinggi :"))
+    // for ( a = 0; a < tinggi; a++ ) {
+    //     for ( b = tinggi; b >= a; b-- ) {
+    //         y += '_'
+    //         // document.write(' ')
+    //     }
+    //     for ( b = 0; b <= a*2; b++ ) {
+    //         y += b+1
+    //         // document.write('*')
+    //     }
+    //     y += '\n'
+    //     // document.write('<br>')
+    // }
+    // document.querySelector('#id').innerText = y
+    // console.log(y)
+
+    // var y = ''
+    // for ( a = 0; a < tinggi; a++ ) {
+    //     for ( b = tinggi; b >= a; b-- ) {
+    //         y += '_'
+    //         // document.write(' ')
+    //     }
+    //     for ( b = 0; b <= a*2; b++ ) {
+    //         y += '*'
+    //         // document.write('*')
+    //     }
+    //     y += '\n'
+    //     // document.write('<br>')
+    // }
+    // document.querySelector('#en').innerText = y
+    // console.log(y)
+    var hasil = ""
+    var a = parseInt(prompt("Masukka Angka"))
+    for (var i = 0; i <= a; i++){
+        for (var j = 1; j <= a-i; j++){
+            if (j == a){
+                var warna = `<span style="color: red;"">${j}</span>`
+                hasil += warna
+            }else {
+                hasil += `<span style="color: blue;"">${j + " "}</span>`
+            }
+        }hasil += '<br>'
+    }
+    document.querySelector('#en').innerHTML = hasil
+
+</script>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">Pencet Dong</button>
+</body>
+</html>
+<script>
+    var btn = document.querySelector('.button')
+    btn.addEventListener("click",()=>{
+        var nama = prompt("Masukkan Nama Anda")
+        if ((nama == "") || !nama){
+             alert("Gagal")
+        } else{
+            var tgl = prompt("Masukkan tanggal Lahir") // 12/april/2002
+            var hari = new Date()
+            var lahir = new Date(tgl)
+            var tahun = 0
+            console.log(lahir.getMonth())
+            console.log(lahir)
+            if ((lahir.getMonth() > hari.getMonth())) {
+                tahun = 1
+            } else if ((lahir.getMonth() == hari.getMonth()) && (lahir.getDate() > hari.getDate())) {
+                tahun = 1
+            }
+            var umur = hari.getFullYear() - lahir.getFullYear() - tahun;
+            var konfirmasi = confirm(`Hai ${nama}, apakah benar tanggal lahir kamu ${tgl}`)
+            if (konfirmasi){
+                if (umur >= 0){
+                    alert("umur anda sekarang " + umur)
+                }else{
+                    alert("Anda Belum Lahir")
+                }
+            }
+        }
+    })
+        
+</script>

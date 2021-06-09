@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Oswald:wght@200&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: rgb(163, 163, 231);
+        }
+        .judul {
+            background-color: rgb(32, 31, 138);
+            font-size: 20px;
+            color: white;
+            overflow: hidden;
+            padding: 10px;   
+            display: flex;
+            align-items: center; 
+        }
+        .judul img {
+            width: 100px;
+            height: 100;
+            border-radius: 50%; 
+            border: 2px solid rgb(34, 184, 84);  
+        }
+        .judul .nama {
+            flex: 1;
+            justify-content: center;
+            text-align: center;
+            /* border: 2px solid red; */
+        }
+        nav {
+            background-color: rgb(54, 85, 151);
+            overflow: hidden;
+        }
+        .nav-icon {
+            float: left;
+        }
+        .nav-icon a {
+            display: flex;  
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            padding: 10px 16px;
+        }
+        .nav-icon a:hover {
+            background-color: rgb(125, 230, 55);
+            cursor: pointer;
+        }
+        .nav-icon a i {
+            margin-right: 5px;
+        }
+        .list {
+            display: none;
+            position: absolute;
+            background-color: rgb(18, 50, 119);
+            box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+        }
+        .list a{
+            display: block;
+            padding: 12px 14px;
+            text-decoration: none;
+        }
+                
+        aside {
+            /* margin: 10px; */
+            padding: 5px;
+            font-weight: bold;
+            font-size: 20px;
+            background-color: rgb(103, 103, 201);
+            color: white;
+        }
+        table {
+            border-collapse: collapse;
+        }
+        table td {
+            padding: 5px;
+            overflow: hidden;
+        }
+        table td a:link {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="judul">
+        <div class="hero">
+            <img src="https://pbs.twimg.com/profile_images/1372377869347811331/b2qy-DOy.jpg" alt="faris" width="100px">
+        </div>
+        <div class="nama">
+            <h1>Ahmad Farisul Haq</h1>
+            <p>200411100171</p>
+        </div>
+    </div>
+    <nav>
+        <div class="nav-icon">
+            <a><i class="material-icons">lunch_dining</i>Makanan</a>
+            <div class="list">
+                <a href="">Nasi Ayam</a>
+                <a href="">Nasi Pecel</a>
+                <a href="">Nasi Telur</a>
+            </div>
+        </div>
+        <div class="nav-icon">
+            <a><i class="material-icons">coffee</i>Minuman</a>
+            <div class="list">
+                <a href="">Es Teh</a>
+                <a href="">Es Jeruk</a>
+                <a href="">Air</a>
+            </div>
+        </div>
+    </nav>
+    <aside>
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td>:</td>
+                <td>Ahmad Farisul Haq</td>
+            </tr>
+            <tr>
+                <td>NIM</td>
+                <td>:</td>
+                <td>200411100171</td>
+            </tr>
+            <tr>
+                <td>TTL</td>
+                <td>:</td>
+                <td>Sumenep, 12 April 2002</td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td>:</td>
+                <td>Dusun Mantajun, Dasuk, Sumenep</td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>:</td>
+                <td>Mahasiswa</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:</td>
+                <td><a href="mailto:ahmadfarisulhaqq@gmail.com">ahmadfarisulhaqq@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td>Whatsapp</td>
+                <td>:</td>
+                <td><a href="http://wa.me/6287881735505">087881735505</a></td>
+            </tr>
+        </table>
+    </aside>
+    <script>
+        const menu = document.querySelectorAll('.nav-icon')
+        menu.forEach((item)=>{
+            console.log(item.children[1].style.display)
+            item.addEventListener('click', ()=>{
+                let list = item.children[1]
+                console.log(list.style.display)
+                if ((list.style.display === "none") || (list.style.display === "")){
+                    list.style.display = "block"
+                } else {
+                    list.style.display = "none"
+                } 
+            })
+        })
+    </script>
+</body>
+</html>

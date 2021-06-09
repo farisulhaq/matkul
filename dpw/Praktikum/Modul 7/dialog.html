@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body {
+                background: rgba(0, 0, 0, 0.9);
+            }
+            .center {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .btn {
+                padding: 8px 16px;
+                background-color: #ccc;
+                border: none;
+                outline: none;
+                border-radius: 5px;
+            }
+            .btn:hover{
+                background-color: #afafaa;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="center">
+            <button class="btn">Click Me</button>
+        </div>
+        <script>
+           const btn = document.querySelector('.btn');
+           btn.addEventListener("click",()=>{
+                //    Inputan Dari User
+               const nama = prompt("Masukkan Nama Anda :","Ahmad Farisul Haq");
+               const tgl = prompt("Masukkan Tanggal Lahir Anda :\nContoh: tgl bulan tahun");
+                //    Penentuan Tanggal Lahir
+               const today = new Date();
+               const lahir = new Date(tgl);
+               let tahun = 0;
+               if ((lahir.getMonth() > today.getMonth()) || ((lahir.getMonth() == today.getMonth()) && (lahir.getDate() > today.getDate()))) {
+                   tahun = 1;
+               }
+               const umur = today.getFullYear() - lahir.getFullYear() - tahun;
+               const conf = confirm(`Apakah Benar Nama ${nama} lahir pada tanggal ${tgl} ?`)
+               if (conf) {
+                   alert(`${nama} Sekarang Berumur ${umur}`)
+               }
+           })
+        </script>
+    </body>
+</html>

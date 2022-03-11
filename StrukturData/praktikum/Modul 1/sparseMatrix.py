@@ -38,4 +38,4 @@ def multSparseMatrix(matx1,matx2,row1,col1,row2,col2):
             for z in range(col1):
                 nilai += matx1.get((x,z),0) * matx2.get((z,y),0)
             mult[x,y] = nilai
-    return mult
+    return mult 

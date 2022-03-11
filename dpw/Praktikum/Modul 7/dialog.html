@@ -36,7 +36,7 @@
            btn.addEventListener("click",()=>{
                 //    Inputan Dari User
                const nama = prompt("Masukkan Nama Anda :","Ahmad Farisul Haq");
-               const tgl = prompt("Masukkan Tanggal Lahir Anda :\nContoh: tgl bulan tahun");
+               const tgl = prompt("Masukkan Tanggal Lahir Anda :\nContoh: mm/dd/yyyy");
                 //    Penentuan Tanggal Lahir
                const today = new Date();
                const lahir = new Date(tgl);
@@ -47,7 +47,7 @@
                const umur = today.getFullYear() - lahir.getFullYear() - tahun;
                const conf = confirm(`Apakah Benar Nama ${nama} lahir pada tanggal ${tgl} ?`)
                if (conf) {
-                   alert(`${nama} Sekarang Berumur ${umur}`)
+                   umur > 0 ? alert(`${nama} Sekarang Berumur ${umur}`) : alert(`${nama} Belum Lahir`);
                }
            })
         </script>

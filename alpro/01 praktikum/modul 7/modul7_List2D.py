@@ -50,9 +50,9 @@ def multMat(mat1,mat2):
 # main program #
 # create matriks
 print('Create Mat 1')
-Matriks1 = createMat2D(2,3)
+Matriks1 = createMat2D(4,4)
 print('Create Mat 2')
-Matriks2 = createMat2D(2,3)
+Matriks2 = createMat2D(4,4)
 print('Create Mat 3')
 Matriks3 = createMat2D(3,2)
 # menampilkan matriks
